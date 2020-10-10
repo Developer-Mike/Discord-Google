@@ -1,0 +1,14 @@
+//Open Script Editor and clear all commands and copy the command below
+//Make a Webhook and replace `UrlFetchApp.fetch('with your wbhook url',{`
+//For making more advanced code, please refer to App Script.
+
+function onSubmit(e) {
+  var discordPayload = {
+    content: 'Form submitted'
+  }
+  UrlFetchApp.fetch('webhook-url', {
+    method: 'post',
+    payload: JSON.stringify(discordPayload),
+    contentType: 'application/json'
+  })
+}
